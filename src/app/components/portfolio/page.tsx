@@ -94,7 +94,7 @@ const Portfolio = () => {
             <Image src={"/taiwind.png"} alt={`project-${index + 1}`} width={200} height={200} className="rounded-md" />
             <h3 className="text-xl font-semibold text-white mt-4">Project Title {index + 1}</h3>
             <p className="text-sm text-gray-300 mt-2 text-center">
-              A brief description of the project goes here. This showcases some details about the project's purpose and technology used.
+              A brief description of the project goes here. This showcases some details about the project&apos;s purpose and technology used.
             </p>
             <button className="mt-4 px-4 py-2 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white rounded-lg">
               View Project
