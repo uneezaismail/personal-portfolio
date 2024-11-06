@@ -95,7 +95,7 @@ const Navbar = () => {
   return (
     <nav className="relative flex justify-between w-full px-5 py-2 md:px-10 lg:px-20 m-auto md:py-4 items-center bg-white">
       <div className="text-md lg:text-2xl text-purple-600 font-extrabold nav-name">
-        <span className="font-cookie text-4xl lg:text-5xl">Uneeza</span> ISMAIL
+        <span className="font-tangerine text-4xl lg:text-5xl">Uneeza</span> ISMAIL
       </div>
       
       <div className="font-serif">

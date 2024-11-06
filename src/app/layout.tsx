@@ -1,40 +1,40 @@
 import type { Metadata } from "next";
+import { Roboto, Cookie, Parisienne, Tangerine } from '@next/font/google';
 import localFont from "next/font/local";
-import "./globals.css";
-import { Roboto, Tangerine , Parisienne , Cookie } from '@next/font/google';
+import './globals.css';
+
 
 const roboto = Roboto({
-  weight: '700', 
+  weight: '700',
   subsets: ['latin'],
-  variable: "--font-roboto",     
+  variable: '--font-roboto',
 });
-
 const cookie = Cookie({
-  weight: '400', 
+  weight: '400',
   subsets: ['latin'],
-  variable: "--font-roboto",     
+  variable: '--font-cookie',
 });
 const parisienne = Parisienne({
-  weight: '400', 
+  weight: '400',
   subsets: ['latin'],
-  variable: "--font-roboto",     
+  variable: '--font-parisienne',
 });
-
 const tangerine = Tangerine({
-  weight: '700', 
+  weight: '700',
   subsets: ['latin'],
-  variable: "--font-roboto",     
+  variable: '--font-tangerine',
 });
 
+// Local fonts
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+  src: './fonts/GeistVF.woff',
+  variable: '--font-geist-sans',
+  weight: '100 900',
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+  src: './fonts/GeistMonoVF.woff',
+  variable: '--font-geist-mono',
+  weight: '100 900',
 });
 
 export const metadata: Metadata = {

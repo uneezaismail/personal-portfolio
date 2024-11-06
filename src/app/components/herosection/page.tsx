@@ -104,7 +104,7 @@ import React, { useEffect, useState } from 'react';
 const Hero = () => {
   const [displayedText, setDisplayedText] = useState<string[]>([]);
   const [isHeroVisible, setIsHeroVisible] = useState(false);
-  const paragraphText = "A Creative Frontend Developer and UI/UX Designer.".split(" ");
+  const paragraphText = "A A Creative Frontend Developer and UI/UX Designer.".split(" ");
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -136,9 +136,9 @@ const Hero = () => {
       <div className="flex md:hidden w-[250px] sm:w-[300px] image-wrapper m-auto mb-8 items-center justify-center">
         <Image className="rounded-md border-white border-2" src="/u-portfolio.avif" alt="portfolio" width={250} height={250} />
       </div>
-      <div className="flex justify-center items-start mx-auto flex-col md:justify-between w-[95%] sm:w-[80%] md:w-[60%]">
-        <span className="text-white text-2xl md:text-3xl font-roboto">Hey, I am Uneeza</span>
-        <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-2xl lg:text-4xl xl:text-5xl my-4">
+      <div className="flex justify-center items-start mx-auto flex-col md:justify-between w-[100%] sm:w-[80%] md:w-[60%]">
+        <span className="text-white text-md md:text-2xl font-cookie">Hey, I am Uneeza</span>
+        <h1 className="text-transparent bg-clip-text  bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-3xl lg:text-4xl xl:text-5xl my-4">
           {displayedText.join(" ")}
         </h1>
         <p className="font-semibold md:text-sm lg:text-lg text-white">
