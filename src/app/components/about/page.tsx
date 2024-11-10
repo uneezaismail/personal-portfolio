@@ -1,27 +1,3 @@
-// import Image from 'next/image'
-// import React from 'react'
-
-// const About = () => {
-//   return (
-//     <main className='lg:mt-16'>
-//     <div className=' flex w-[95%] justify-between items-center text-white mx-auto '>
-//         <div><Image src={"/about-3-removebg-preview (1).png"} alt='about-image' width={500} height={400}/></div>
-//         <div className='w-[50%]'>
-//         <h3 className='text-2xl inline-block items-center mb-4  border-b-2 border-b-purple-400 font-bold text-white '>
-//        ABOUT</h3>       
-//             <h2 className='font-bold text-4xl mb-4 font-serif text-lavander'>Curious About me? Here you have it:</h2>
-//         <p>I'm Uneeza, a dedicated Frontend Developer and passionate UI/UX Designer who thrives on crafting intuitive and visually engaging digital experiences. With a strong foundation in frontend technologies and a keen eye for design, I specialize in building clean, responsive interfaces that balance form and function.
-// </p>
-// <p>
-// My journey in web development is driven by a love for learning and the constant pursuit of improvement. Beyond coding, I'm always exploring new design trends and techniques to keep my work both innovative and impactful.</p>
-//     </div>
-//     </div>
-//     </main>
-//   )
-// }
-
-// export default About
-
 'use client'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
@@ -33,7 +9,7 @@ const About = () => {
     const handleScroll = () => {
       const aboutSection = document.getElementById('about-section');
       const sectionTop = aboutSection?.getBoundingClientRect().top;
-      const triggerHeight = window.innerHeight * 0.75; // Trigger when 75% of section is in view
+      const triggerHeight = window.innerHeight * 0.75; 
       if (sectionTop && sectionTop < triggerHeight) {
         setIsVisible(true);
       }
@@ -44,7 +20,7 @@ const About = () => {
   }, []);
 
   return (
-    <main className='mt-16 md:mt-20 lg:my-24'>
+    <main className='mt-16 md:mt-20 lg:my-28'>
       <div id="about-section" className={`flex flex-col md:flex-row w-[95%] lg:w-[90%] justify-between items-center text-white mx-auto transition-all duration-700 ease-in-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <h3 className='md:hidden text-2xl items-center mb-10  border-b-2 border-b-purple-400 font-bold text-white'>
           ABOUT
@@ -57,9 +33,9 @@ const About = () => {
             ABOUT
           </h3>
           <h2 className='font-bold text-2xl lg:text-4xl mt-10 mb-6 md:mt-1 md:mb-4 font-serif text-lavender '>Curious About me? Here you have it:</h2>
-          <p className='md:text-sm'>I&apos;m Uneeza, a dedicated Frontend Developer and passionate UI/UX Designer who thrives on crafting intuitive and visually engaging digital experiences. With a strong foundation in frontend technologies and a keen eye for design, I specialize in building clean, responsive interfaces that balance form and function.</p>
+          <p className='md:text-xl'>I&apos;m Uneeza, a dedicated Frontend Developer and passionate UI/UX Designer who thrives on crafting intuitive and visually engaging digital experiences. With a strong foundation in frontend technologies and a keen eye for design, I specialize in building clean, responsive interfaces that balance form and function.</p>
           <br />
-          <p className='md:text-sm'>My journey in web development is driven by a love for learning and the constant pursuit of improvement. Beyond coding, I&apos;m always exploring new design trends and techniques to keep my work both innovative and impactful.</p>
+          <p className='md:text-xl'>My journey in web development is driven by a love for learning and the constant pursuit of improvement. Beyond coding, I&apos;m always exploring new design trends and techniques to keep my work both innovative and impactful.</p>
         </div>
       </div>
     </main>

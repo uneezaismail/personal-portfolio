@@ -1,55 +1,3 @@
-// import Image from 'next/image';
-// import React from 'react';
-
-// const Portfolio = () => {
-//   return (
-//     <section className="p-8">
-//       <h2 className="text-3xl font-bold text-center text-white mb-8">Portfolio</h2>
-//       <div className="grid md:grid-cols-3 grid-cols-1 gap-6">
-        
-//         {/* Project 1 */}
-//         <div className="flex flex-col items-center border-2 border-white p-4 rounded-lg">
-//           <Image src={"/taiwind.png"} alt='project-1' width={200} height={200} className="rounded-md" />
-//           <h3 className="text-xl font-semibold text-white mt-4">Project Title 1</h3>
-//           <p className="text-sm text-gray-300 mt-2 text-center">
-//             A brief description of the project goes here. This showcases some details about the project's purpose and technology used.
-//           </p>
-//           <button className="mt-4 px-4 py-2 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white rounded-lg">
-//             View Project
-//           </button>
-//         </div>
-
-//         {/* Project 2 */}
-//         <div className="flex flex-col items-center border-2 border-white p-4 rounded-lg">
-//           <Image src={"/taiwind.png"} alt='project-2' width={200} height={200} className="rounded-md" />
-//           <h3 className="text-xl font-semibold text-white mt-4">Project Title 2</h3>
-//           <p className="text-sm text-gray-300 mt-2 text-center">
-//             A brief description of the project goes here. This showcases some details about the project's purpose and technology used.
-//           </p>
-//           <button className="mt-4 px-4 py-2 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white rounded-lg">
-//             View Project
-//           </button>
-//         </div>
-
-//         {/* Project 3 */}
-//         <div className="flex flex-col items-center border-2 border-white p-4 rounded-lg">
-//           <Image src={"/taiwind.png"} alt='project-3' width={200} height={200} className="rounded-md" />
-//           <h3 className="text-xl font-semibold text-white mt-4">Project Title 3</h3>
-//           <p className="text-sm text-gray-300 mt-2 text-center">
-//             A brief description of the project goes here. This showcases some details about the project's purpose and technology used.
-//           </p>
-//           <button className="mt-4 px-4 py-2 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white rounded-lg">
-//             View Project
-//           </button>
-//         </div>
-
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default Portfolio;
-
 'use client'
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
@@ -57,8 +5,32 @@ import React, { useEffect, useState } from 'react';
 const Portfolio = () => {
   const [visibleProjects, setVisibleProjects] = useState<Record<number, boolean>>({});
 
+  const projects = [
+    {
+      id: 1,
+      imageSrc: '/interior.png',
+      title: 'PearlVista',
+      description: 'The Interior Design Portfolio showcases a collection of residential and commercial projects, focusing on creating aesthetically pleasing, functional spaces',
+      link: 'https://interior-design-uneeza-ismails-projects.vercel.app/'
+    },
+    {
+      id: 2,
+      imageSrc: '/resume.png',
+      title: 'Resume Builder',
+      description: 'Whether youre in tech, finance, or any other industry, our platform makes creating a professional resume quick and easy. Just fill in your details and youre ready to impress.',
+      link: 'https://shareable-resume-generator.vercel.app/'
+    },
+    {
+      id: 3,
+      imageSrc: '/coffee.png',
+      title: 'Coffee Blog',
+      description: ' The blog features a variety of articles discussing coffee beans, brewing techniques, product reviews, and stories from the coffee world.',
+      link: 'https://coffee-blog-page.vercel.app/'
+    },
+  ];
+
   useEffect(() => {
-    const projects = document.querySelectorAll('.project');
+    const projectElements = document.querySelectorAll('.project');
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -74,37 +46,44 @@ const Portfolio = () => {
       { threshold: 0.5 }
     );
 
-    projects.forEach((project) => observer.observe(project));
+    projectElements.forEach((project) => observer.observe(project));
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section className="p-8">
-      <h2 className="text-3xl font-bold text-center text-white mb-8">Portfolio</h2>
+    <section className="px-10 py-5 lg:my-20 w-[95%] lg:w-[90%] mx-auto lg:mb-10">
+      <h2 className="text-3xl font-bold text-center text-white mb-10">Portfolio</h2>
       <div className="grid md:grid-cols-3 grid-cols-1 gap-6">
-        
-        {[1, 2, 3].map((_, index) => (
+        {projects.map((project, index) => (
           <div
-            key={index}
+            key={project.id}
             data-index={index}
-            className={`project flex flex-col items-center border-2 border-white p-4 rounded-lg transition-transform duration-700 ease-out
+            className={`project flex flex-col items-center border-2 border-white p-2 rounded-lg transition-transform duration-700 ease-out bg-white
               ${visibleProjects[index] ? 'transform translate-y-0 opacity-100' : 'transform -translate-y-10 opacity-0'}
             `}
           >
-            <Image src={"/taiwind.png"} alt={`project-${index + 1}`} width={200} height={200} className="rounded-md" />
-            <h3 className="text-xl font-semibold text-white mt-4">Project Title {index + 1}</h3>
-            <p className="text-sm text-gray-300 mt-2 text-center">
-              A brief description of the project goes here. This showcases some details about the project&apos;s purpose and technology used.
+            <div className="w-auto h-[200px] lg:w-[95%] overflow-hidden rounded-md">
+              <Image
+                src={project.imageSrc}
+                alt={project.title}
+                width={400}
+                height={200}
+                className="rounded-md border-2 border-gray-400"
+                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+              />
+            </div>
+            <h3 className="text-xl font-semibold mt-4">{project.title}</h3>
+            <p className="text-sm mt-2 text-center">
+              {project.description}
             </p>
             <button className="mt-4 px-4 py-2 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white rounded-lg">
-              View Project
+            <a href={project.link} target="_blank" rel="noopener noreferrer">View Project</a>
             </button>
           </div>
         ))}
-        
       </div>
     </section>
   );
-}
+};
 
 export default Portfolio;

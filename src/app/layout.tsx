@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Roboto, Cookie, Parisienne, Tangerine } from '@next/font/google';
 import localFont from "next/font/local";
 import './globals.css';
+import Navbar from "./components/navbar/page";
+import Footer from "./components/footer/page";
 
 
 const roboto = Roboto({
@@ -51,8 +53,9 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${cookie.variable} ${roboto.variable} ${parisienne.variable} ${tangerine.variable} antialiased`}
-      >
+      ><Navbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
