@@ -1,5 +1,6 @@
 'use client'
 
+import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
@@ -52,9 +53,9 @@ const Navbar = () => {
             <li className="nav-item hover:text-purple-700 text-lg text-black"><Link href="/components/skills" onClick={closeDropdown}>Skills</Link></li>
             <li className="nav-item hover:text-purple-700 text-lg text-black"><Link href="/components/portfolio" onClick={closeDropdown}>Portfolio</Link></li>
             <li className="nav-item text-purple-600 font-semibold">
-            <Link href="/components/contact" onClick={closeDropdown}><button className="border-2 border-purple-600 py-2 px-4 rounded-md">
+            <Link href="/components/contact" onClick={closeDropdown}> <Button className="border-2 border-purple-600 py-2 px-4 rounded-md">
                 Contact me
-              </button>
+              </Button>
               </Link>
             </li>
           </ul>

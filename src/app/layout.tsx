@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto, Cookie, Parisienne, Tangerine } from '@next/font/google';
+import { Roboto, Cookie, Parisienne, Tangerine } from 'next/font/google';
 import localFont from "next/font/local";
 import './globals.css';
 import Navbar from "./components/navbar/page";

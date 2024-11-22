@@ -1,4 +1,8 @@
 'use client'
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
 import React from 'react';
 
 const ContactMe  = () => {
@@ -10,8 +14,8 @@ const ContactMe  = () => {
           <form className="space-y-6">
             <div className="flex flex-col md:flex-row md:space-x-6">
               <div className="w-full md:w-1/2">
-                <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Name</label>
-                <input
+                <Label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Name</Label>
+                <Input
                   type="text"
                   id="name"
                   name="name"
@@ -20,8 +24,8 @@ const ContactMe  = () => {
                 />
               </div>
               <div className="w-full md:w-1/2 mt-4 md:mt-0">
-                <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">Email</label>
-                <input
+                <Label htmlFor="email" className="block text-gray-700 font-semibold mb-2">Email</Label>
+                <Input
                   type="email"
                   id="email"
                   name="email"
@@ -31,8 +35,8 @@ const ContactMe  = () => {
               </div>
             </div>
             <div>
-              <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">Message</label>
-              <textarea
+              <Label htmlFor="message" className="block text-gray-700 font-semibold mb-2">Message</Label>
+              <Textarea
                 id="message"
                 name="message"
                 placeholder="Your Message"
@@ -41,12 +45,12 @@ const ContactMe  = () => {
               />
             </div>
             <div className="text-center">
-              <button
+              <Button
                 type="submit"
                 className="px-6 py-3 bg-gradient-to-r from-purple-600 to-red-500 text-white font-semibold rounded-lg shadow-md hover:from-pink-600 hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-600 transition ease-in-out duration-300"
               >
                 Send Message
-              </button>
+              </Button>
             </div>
           </form>
         </div>
