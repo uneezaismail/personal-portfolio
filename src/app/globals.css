@@ -10,7 +10,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: linear-gradient(to right, #5E35B1, #101010);;
-    --foreground: #ededed;
+    --foreground: black;
   }
 }
 
@@ -37,21 +37,20 @@ body {
 @keyframes fadeInSlide {
   0% {
     opacity: 0;
-    transform: translateY(-10px); /* Slide from the top */
+    transform: translateY(-10px); 
   }
   100% {
     opacity: 1;
-    transform: translateY(0); /* End position */
+    transform: translateY(0);
   }
 }
 
-/* Apply this animation to the navbar items, name, and FaBars icon */
+
 .nav-item, .nav-name, .fa-bars {
   animation: fadeInSlide 1s ease-out forwards;
   opacity: 0;
 }
 
-/* Delay the animation for each navbar item */
 .nav-item:nth-child(1) {
   animation-delay: 0.2s;
 }
@@ -71,11 +70,11 @@ body {
   animation-delay: 1.2s;
 }
 
-/* Apply delays to name and FaBars icon */
+
 .nav-name {
-  animation-delay: 0s; /* Appears first */
+  animation-delay: 0s;
 }
 
 .fa-bars {
-  animation-delay: 1.2s; /* Appears last */
+  animation-delay: 1.2s; 
 }

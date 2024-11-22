@@ -31,7 +31,7 @@ const Navbar = () => {
       </div>
       
       <div className="nav-item hidden md:block text-sm md:text-md lg:text-lg font-semibold">
-        <button className="border-2 border-purple-600 py-1 px-1 md:py-2 md:px-4 text-purple-600 rounded-md">
+        <button className="border-2 border-purple-600 hover:bg-purple-600 hover:text-white py-1 px-1 md:py-2 md:px-4 text-purple-600 rounded-md">
           <Link href="/components/contact">Contact me</Link>
         </button>
       </div>
