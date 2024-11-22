@@ -7,7 +7,7 @@ const ContactMe  = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl lg:text-4xl font-bold text-white text-center mb-8">Contact Me</h2>
         <div className="bg-white shadow-lg rounded-lg p-6 sm:p-8 lg:p-10">
-          <form className="space-y-6" action="mailto:your-email@example.com" method="POST">
+          <form className="space-y-6">
             <div className="flex flex-col md:flex-row md:space-x-6">
               <div className="w-full md:w-1/2">
                 <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Name</label>

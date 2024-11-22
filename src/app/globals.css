@@ -30,10 +30,6 @@ body {
   }
 }
 
-/* Add this to your global CSS file, or inside your component with styled-components or Tailwind's @layer directive */
-/* Add this to your global CSS file or inside the component */
-
-/* Keyframe for fade-in and slide effect */
 @keyframes fadeInSlide {
   0% {
     opacity: 0;

@@ -23,17 +23,18 @@ const Navbar = () => {
       
       <div className="font-serif">
         <ul className="hidden md:flex justify-between md:text-xl lg:text-2xl gap-x-5">
-          <li className="nav-item hover:text-purple-700 hover:border-b-purple-600 hover:border-b-2"><Link href="/" onClick={closeDropdown}>Home</Link></li>
-          <li className="nav-item hover:text-purple-700 hover:border-b-purple-600 hover:border-b-2"><Link href="/components/about" onClick={closeDropdown}>About me</Link></li>
-          <li className="nav-item hover:text-purple-700 hover:border-b-purple-600 hover:border-b-2"><Link href="/components/skills" onClick={closeDropdown}>Skills</Link></li>
-          <li className="nav-item hover:text-purple-700 hover:border-b-purple-600 hover:border-b-2"><Link href="/components/portfolio" onClick={closeDropdown}>Portfolio</Link></li>
+          <li className="nav-item hover:text-purple-700 hover:border-b-purple-600 hover:border-b-2"><Link href="/" >Home</Link></li>
+          <li className="nav-item hover:text-purple-700 hover:border-b-purple-600 hover:border-b-2"><Link href="/components/about">About me</Link></li>
+          <li className="nav-item hover:text-purple-700 hover:border-b-purple-600 hover:border-b-2"><Link href="/components/skills">Skills</Link></li>
+          <li className="nav-item hover:text-purple-700 hover:border-b-purple-600 hover:border-b-2"><Link href="/components/portfolio">Portfolio</Link></li>
         </ul>
       </div>
       
       <div className="nav-item hidden md:block text-sm md:text-md lg:text-lg font-semibold">
-        <button className="border-2 border-purple-600 hover:bg-purple-600 hover:text-white py-1 px-1 md:py-2 md:px-4 text-purple-600 rounded-md">
-          <Link href="/components/contact">Contact me</Link>
+      <Link href="/components/contact"><button className="border-2 border-purple-600 hover:bg-purple-600 hover:text-white py-1 px-1 md:py-2 md:px-4 text-purple-600 rounded-md">
+          Contact me
         </button>
+        </Link>
       </div>
       
       <FaBars 
@@ -51,9 +52,10 @@ const Navbar = () => {
             <li className="nav-item hover:text-purple-700 text-lg text-black"><Link href="/components/skills" onClick={closeDropdown}>Skills</Link></li>
             <li className="nav-item hover:text-purple-700 text-lg text-black"><Link href="/components/portfolio" onClick={closeDropdown}>Portfolio</Link></li>
             <li className="nav-item text-purple-600 font-semibold">
-              <button className="border-2 border-purple-600 py-2 px-4 rounded-md">
-                <Link href="/components/contact" onClick={closeDropdown}>Contact me</Link>
+            <Link href="/components/contact" onClick={closeDropdown}><button className="border-2 border-purple-600 py-2 px-4 rounded-md">
+                Contact me
               </button>
+              </Link>
             </li>
           </ul>
         </div>

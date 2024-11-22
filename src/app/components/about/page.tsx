@@ -1,27 +1,11 @@
 'use client'
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
 
 const About = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const aboutSection = document.getElementById('about-section');
-      const sectionTop = aboutSection?.getBoundingClientRect().top;
-      const triggerHeight = window.innerHeight * 0.75; 
-      if (sectionTop && sectionTop < triggerHeight) {
-        setIsVisible(true);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+ 
   return (
     <main className='mt-16 md:mt-20 lg:my-28'>
-      <div id="about-section" className={`flex flex-col md:flex-row w-[95%] lg:w-[90%] justify-between items-center text-white mx-auto transition-all duration-700 ease-in-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <div id="about-section" className={`flex flex-col md:flex-row w-[95%] lg:w-[90%] justify-between items-center text-white mx-auto `}>
         <h3 className='md:hidden text-2xl items-center mb-10  border-b-2 border-b-purple-400 font-bold text-white'>
           ABOUT
         </h3>
