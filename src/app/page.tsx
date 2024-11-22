@@ -12,8 +12,7 @@ export default function Home() {
     <About/>
     <Skills/>
     <Portfolio/>
-    <ContactMe/>
-    
+    <ContactMe/> 
   </div>
   );
 }

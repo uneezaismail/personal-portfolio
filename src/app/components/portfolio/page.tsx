@@ -1,4 +1,5 @@
 'use client'
+import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -29,8 +30,8 @@ const Portfolio = () => {
   ];
 
   return (
-    <section className="px-10 py-5 lg:my-20 w-[95%] lg:w-[90%] mx-auto lg:mb-10">
-      <h2 className="text-3xl font-bold text-center text-white mb-10 border-b-2 border-purple-400 w-fit flex mx-auto">Portfolio</h2>
+    <section className="px-10 py-5 lg:my-28 w-[95%] lg:w-[90%] mx-auto lg:mb-10 h-fit">
+      <h2 className="text-3xl xl:text-4xl font-bold text-center text-white mb-10 border-b-2 border-purple-400 w-fit flex mx-auto">Portfolio</h2>
       <div className="grid md:grid-cols-3 grid-cols-1 gap-6">
         {projects.map((project) => (
           <div
@@ -52,9 +53,9 @@ const Portfolio = () => {
               {project.description}
             </p>
             <Link href={project.link} target="_blank" rel="noopener noreferrer">
-            <button className="mt-4 px-4 py-2 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white rounded-lg">
+            <Button className="mt-4 px-4 py-2 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white rounded-lg">
               View Project
-            </button>
+            </Button>
             </Link>
           </div>
         ))}

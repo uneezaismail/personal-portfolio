@@ -16,7 +16,7 @@ const Skills = () => {
   return (
     <div className="my-14 xl:my-20">
       <h3 className="mx-auto flex flex-col justify-center items-center mb-10 text-white">
-        <span className="border-b-2 border-purple-400 text-2xl xl:text-3xl font-bold mb-4 xl:mb-6">SKILLS</span>
+        <span className="border-b-2 border-purple-400 text-3xl lg:text-4xl font-bold mb-4 xl:mb-6">SKILLS</span>
         <p className="text-sm lg:text-lg font-extralight text-gray-300">
           The Skills and tools I am really good at:
         </p>
